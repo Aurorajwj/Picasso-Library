@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>毕加思索图书馆</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+
+	<link rel="stylesheet" href="css/loginbox.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src = "js/loginbox.js"></script>
+	<script type="text/javascript" src="js/account.js"></script>
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/account.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<link rel="stylesheet" href="css/ripple.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body>
+		<div id="logstatus" style="display: none" th:text="${session.user}?${'suc'}:'lose'"></div>
+		<div class="colorlib-loader"></div>
+		
+			<nav class="colorlib-nav" role="navigation">
+				<div class="top-menu">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-3">
+								<div id="colorlib-logo"><nobr><a href="index.html">毕加思索图书馆</a></nobr></div>
+							</div>
+							<div class="col-xs-9 text-right menu-1">
+								<ul>
+									<li ><a href="/">首页</a></li>
+									<li><a href="/news">新闻</a></li>
+									<li ><a href="/forum">论坛</a></li>
+									<li><a href="/books">图书</a></li>
+									<li><a href="/leaderboard">排行榜</a></li>
+
+									<li><a href="登录注册表单.html" target="_self" class = "change">登录 </a>
+										<div class="col-lg-2" id="userinfo" >
+											<div class="right">
+												<ul class="nav navbar-nav">
+													<li class="dropdown" >
+														<a href="#" class="dropdown-toggle"
+														data-toggle="dropdown"
+														style="height: 60px">
+														<img alt="" class="img-circle" src="images/gallery-1.jpg" width="38px" height="38px"/>
+														<span style="color: #000000;font-size: 15px;">
+														</span>
+													</a>
+													<div class="dropdown-menu pull-right"
+													style="background: #FFFFFF;width: 260px;overflow: hidden">
+													<div style="margin-top: 16px;border-bottom: 1px solid #eeeeee">
+														<div style="text-align: center">
+															<img class="img-circle" src="images/gallery-1.jpg"
+															style="width: 38px;height: 38px;"/>
+														</div>
+														<div style="color: #323534;text-align: center;line-height: 36px;font-size: 15px">
+															<span>username</span>
+														</div>
+													</div>
+
+													<div class="row" style="margin-left: 15px;margin-right: 15px;margin-top: 10px">
+														<div class="col-md-6 text-center grid">
+															<i class="fa fa-user" style="font-size: 25px;line-height: 45px;"></i>
+															<p style="padding: 0px;margin-top: 6px;margin-bottom: 10px;font-size: 12px">
+															个人中心</p>
+														</div>
+														<div class="col-md-6 text-center grid">
+															<i class="fa fa-comments" style="font-size: 25px;line-height: 45px;"></i>
+															<p style="padding: 0px;margin-top: 6px;margin-bottom: 10px;font-size: 12px">
+															消息</p>
+														</div>
+													</div>
+
+													<div class="row" style="margin-left: 15px;margin-right: 15px;margin-top: 10px">
+														<div class="col-md-6 text-center grid">
+															<i class="fa fa-book" style="font-size: 25px;line-height: 45px;"></i>
+															<p style="padding: 0px;margin-top: 6px;margin-bottom: 10px;font-size: 12px">
+															借书记录</p>
+														</div>
+														<div class="col-md-6 text-center grid">
+															<i class="fa fa-bookmark" style="font-size: 25px;line-height: 45px;"></i>
+															<p style="padding: 0px;margin-top: 6px;margin-bottom: 10px;font-size: 12px">
+															我的帖子</p>
+														</div>
+													</div>
+														<a href="/logout" style="margin: 0;padding: 0;">
+															<div class="row" style="margin-top: 20px">
+																<div class="text-center" style="padding: 15px;margin: 0px;background: #f6f5f5;color: #323534;">
+																	<i class="fa fa-sign-out"></i> 退出登录
+																</div>
+															</div>
+														</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li><!-- 登录注册表单 -->
+					</ul><!-- 导航栏右部 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<aside id="colorlib-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 breadcrumbs text-center">
+                <h2>个人中心</h2>
+                <p><span><a href="index.html">首页</a></span> / <span>个人中心</span></p>
+            </div>
+        </div>
+    </div>
+</aside>
+<div class="container" style="height:500px">
+	<div class="row pcontainer" style="margin-top: 0px;">
+		<div class="col-md-2 big_box">
+			<ul class="left_box" style="margin: 0;padding: 0;">
+				<li class="pmenu"><a data-toggle="tab" href="#menu1" data-ripple = "ripple"style="cursor: pointer;">个人资料</a></li>
+				<li class="pmenu"><a data-toggle="tab" href="#menu2" data-ripple = "ripple">修改密码</a></li>
+				<li class="pmenu"><a data-toggle="tab" href="#menu3" data-ripple = "ripple">我的帖子</a></li>
+				<li class="pmenu"><a data-toggle="tab" href="#menu4" data-ripple = "ripple">借阅记录</a></li>
+				<li class="pmenu"><a data-toggle="tab" href="#menu5" data-ripple = "ripple">消息</a></li>
+			</ul>
+		</div>
+
+		<div class="tab-content col-md-9" >
+			<div id="menu1" class="tab-pane fade in active">
+				<h2>个人资料</h2>
+				<hr style="filter: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color="#6f5499" size="3" />
+				<div class="col-md-2">
+					<img class="img-circle" src="images/gallery-1.jpg"style="width: 100px;height: 100px;"/>
+				</div>
+				<div class="col-md-10">
+					<p th:text="'用户名：'+${session.user.username}">用户名:</p>
+					<hr style="filter: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color="#6f5499" size="3" />
+					<ul class="self">
+						<li class="comon" th:text="'姓名：'+${session.user.name}">姓名：
+						</li> 
+						<li class="comon" th:text="'性别：'+${session.user.sex}">性别：
+						</li>
+						<li class="comon" th:text="'邮箱：'+${session.user.email}">邮箱：
+						</li> 
+						<li class="comon" th:text="'手机号：'+${session.user.phnum}">手机号：
+						</li> 
+						<li class="comon" th:text="'获赞数：'+${user_finfo.agree}">获赞数：
+						</li> 
+						<li class="comon" th:text="'发帖数：'+${user_finfo.logs}">发帖数：
+						</li> 
+						<li class="comon" th:text="'评论数：'+${user_finfo.coms}">评论数：
+						</li> 
+					</ul>
+				</div>
+			</div>
+			<div id="menu2" class="tab-pane fade">
+				<h3>修改密码</h3>
+				<hr>
+				<form class="form-horizontal" role="form" action="/pswdupdate" method="post">
+					<div class="form-group">
+						<label class="col-md-2 control-label plabel">请输入新密码</label>
+						<div class="col-md-6 ppassword">
+							<input class="ppwd" id="focusedInput" type="password" placeholder ="Enter new password" name="newpswd1">
+							<i class="fa fa-eye-slash fa-2x"></i>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label plabel">确认密码</label>
+						<div class="col-md-6 ppassword">
+							<input class="ppwd" id="focusedInput" type="password" placeholder="Confirm your password" name="newpswd2">
+							<i class="fa fa-eye-slash fa-2x"></i>
+						</div>
+					</div>
+					<button type="submit" class="btn pbtn" style="font-size:26px">确认修改</button>
+				</form>
+				<div id="updateres" style="display: none" th:text="${updateres}?${updateres}:''"></div>
+			</div>
+				<div id="menu3" class="tab-pane fade">
+					<h3>我的帖子</h3>
+					<hr>
+					<table id="comment_tab">
+						<tr>
+							<th style="width: 60%">标题</th>
+							<th style="width: 15%">发帖时间</th>
+							<th style="width: 10%">标签</th>
+						</tr>
+						<th:block th:each="log,iterStat:${user_logs}">
+							<tr>
+								<td th:text="${log.title}"></td>
+								<td th:text="${log.time}"></td>
+								<td th:text="${log.tag}"></td>
+							</tr>
+						</th:block>
+					</table>
+
+				</div>
+				<div id="menu4" class="tab-pane fade">
+					<h3>在借记录</h3>
+					<table>
+						<tr>
+							<th style="width: 13%">书名</th>
+							<th style="width: 12%">ISBN</th>
+							<th style="width: 15%">借阅时间</th>
+							<th style="width: 10%">借阅期限</th>
+							<th style="width: 7%">续借</th>
+						</tr>
+						<th:block th:each="lending,iterStat:${user_lendings}">
+							<tr>
+								<td th:text="${lending.name}"></td>
+								<td th:text="${lending.isbn}"></td>
+								<td th:text="${lending.date}"></td>
+								<td th:text="${lending.period}"></td>
+								<td th:text="${lending.extend}"></td>
+							</tr>
+						</th:block>
+					</table>
+					<hr>
+					<h3>已完成的借阅记录</h3>
+					<table>
+						<tr>
+							<th style="width: 13%">书名</th>
+							<th style="width: 12%">ISBN</th>
+							<th style="width: 15%">借出时间</th>
+							<th style="width: 10%">归还时间</th>
+							<th style="width: 7%">借阅期限</th>
+						</tr>
+						<th:block th:each="record,iterStat:${user_records}">
+							<tr>
+								<td th:text="${record.name}"></td>
+								<td th:text="${record.isbn}"></td>
+								<td th:text="${record.date}"></td>
+								<td th:text="${record.ret}"></td>
+								<td th:text="${record.period}"></td>
+							</tr>
+						</th:block>
+					</table>
+
+				</div>
+				<div id="menu5" class="tab-pane fade">
+					<h3>信息</h3>
+					<hr>
+					<div class="pmsg"> 
+						<div class="row">
+							<div class="col-md-2">
+								<img alt="" class="img-circle" src="images/gallery-1.jpg" width="85px" height="85px"/>
+							</div>
+							<div class="col-md-8">
+								<p>发送消息的人</p>
+								<p>hello hello </p>
+							</div>
+							<div class="col-md-2">
+								<p>今天22:46</p>
+							</div>
+						</div>
+						<hr>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	<div class="footer_in"style="text-align: center;background-color: white;padding-top:20px">
+
+		<p class="link_01"><a href="http://www.cuc.edu.cn" target="_blank">中国传媒大学</a> 
+			<a href="http://www.nlc.cn/" target="_blank">国家数字图书馆</a> 
+			<a href="http://www.nlc.cn/nmcb/" target="_blank">国家典籍博物馆</a> 
+			<a href="http://www.clcn.net.cn/" target="_blank">首都图书馆</a></p>
+			<p class="foot">意见与建议：<a href="mailto:lib@cuc.edu.cn">lib@cuc.edu.cn</a>&nbsp;|<span class="icp"><a href="http://www.beian.miit.gov.cn" target="_blank">   京 ICP 备 10039564 号</a>   京公网安备 110402430031 号</span>  <br>
+			Copyright © All Rights Reserved. 中国传媒大学图书馆 版权所有  总访问量：</p>
+		</div>
+
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Flexslider -->
+		<script src="js/jquery.flexslider-min.js"></script>
+		<!-- Owl carousel -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- Magnific Popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/magnific-popup-options.js"></script>
+		<!-- Main -->
+		<script src="js/main.js"></script>
+
+	</body>
+	</html>
+
+<script src="js/ripple.min.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    new Ripple({
+        opacity: 0.6,  //水波纹透明度
+        speed: 1,      //水波纹扩散速度
+        bgColor: "#fff", //水波纹颜色
+        cursor: true  //是否显示手型指针
+    })
+</script>
+<script type="text/javascript">
+	var updateres = document.getElementById("updateres").innerText;
+	if(updateres!=''){
+		alert(updateres);
+	}
+    $(".ppassword").on("click", ".fa-eye-slash", function () {
+        $(this).removeClass("fa-eye-slash").addClass("fa-eye");
+        $(this).prev().attr("type", "text");
+    });
+     
+    $(".ppassword").on("click", ".fa-eye", function () {
+        $(this).removeClass("fa-eye").addClass("fa-eye-slash");
+        $(this).prev().attr("type", "password");
+    });
+</script>

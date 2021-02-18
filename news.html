@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://www.jq22.com/demo/VerticalTimeline/ -->
+<html lang="en" class=" js "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>毕加思索图书馆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="css/loginbox.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src = "js/loginbox.js"></script>
+    <!-- <link rel="shortcut icon" href="http://www.jq22.com/demo/favicon.ico"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="js/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/component.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/account.css">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="css/flexslider.css">
+
+    <link rel="stylesheet" href="css/ripple.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <link rel="stylesheet" href="css/account.css">
+<style>
+  .staff-entry {
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  z-index: 0;
+  background: #e0e0e061;
+  padding: 30px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px; }
+  .staff-entry .staff-img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
+    .staff-entry .desc h3 {
+    font-size: 24px;
+    margin-bottom: 10px; }
+    .staff-entry .desc span {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 13px; }
+    .staff-entry .colorlib-social-icons li {
+    margin-left: 0; }
+    .staff-entry .colorlib-social-icons li a {
+      padding: 0; }
+    .staff-entry:hover{
+    border: 1px solid #FA8072;
+    color: #000;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(221,216,216,0.50);
+    box-shadow: 0px 0px 5px 5px rgba(221,216,216,.5);
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <nav class="colorlib-nav" role="navigation">
+            <div class="top-menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div id="colorlib-logo"><nobr><a href="index.html">毕加思索图书馆</a></nobr></div>
+                        </div>
+                        <div class="col-xs-9 text-right menu-1">
+                            <ul>
+                                <li ><a href="index.html">首页</a></li>
+                                <li class="has-dropdown">
+                                    <a href="news.html">新闻</a>
+                                    <ul class="dropdown">
+                                        <li><a href="single.html">机构设置</a></li>
+                                        <li><a href="#">新闻公告</a></li>
+                                        <li><a href="#">图书馆相关</a></li>
+                                        <li><a href="#">联系我们</a></li>
+                                    </ul>
+                                </li>
+                                <li ><a href="forum.html">论坛</a></li>
+                                <li><a href="books.html">图书</a></li>
+                                <li><a href="leaderboard.html">排行榜</a></li>
+
+                                <li><a href="登录注册表单.html" target="_self" class = "change">登录 </a>
+                                    <div class="col-lg-2" id="userinfo" >
+                                        <div class="right">
+                                            <ul class="nav navbar-nav">
+                                                <li class="dropdown" >
+                                                    <a href="#" class="dropdown-toggle"
+                                                    data-toggle="dropdown"
+                                                    style="height: 60px">
+                                                    <img alt="" class="img-circle" src="images/gallery-1.jpg" width="38px" height="38px"/>
+                                                    <span style="color: #000000,font-size: 15px">
+                                                    </span>
+                                                </a>
+                                                <div class="dropdown-menu pull-right"
+                                                style="background: #FFFFFF;width: 260px;overflow: hidden">
+                                                <div style="margin-top: 16px;border-bottom: 1px solid #eeeeee">
+                                                    <div style="text-align: center">
+                                                        <img class="img-circle" src="images/gallery-1.jpg"
+                                                        style="width: 38px;height: 38px;"/>
+                                                    </div>
+                                                    <div style="color: #323534;text-align: center;line-height: 36px;font-size: 15px">
+                                                        <span>username</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="margin-left: 15px;margin-right: 15px;margin-top: 10px">
+                                                    <div class="col-md-6 text-center grid">
+                                                        <i class="fa fa-user" style="font-size: 25px;line-height: 45px;"></i>
+                                                        <p style="padding: 0px;margin-top: 6px;margin-bottom: 10px;font-size: 12px">
+                                                        个人中心</p>
+                                                    </div>
+                                                    <div class="col-md-6 text-center grid">
+                                                        <i class="fa fa-comments" style="font-size: 25px;line-height: 45px;"></i>
+                                                        <p style="padding: 0px;margin-top: 6px;margin-bottom: 10px;font-size: 12px">
+                                                        消息</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="margin-left: 15px;margin-right: 15px;margin-top: 10px">
+                                                    <div class="col-md-6 text-center grid">
+                                                        <i class="fa fa-book" style="font-size: 25px;line-height: 45px;"></i>
+                                                        <p style="padding: 0px;margin-top: 6px;margin-bottom: 10px;font-size: 12px">
+                                                        借书记录</p>
+                                                    </div>
+                                                    <div class="col-md-6 text-center grid">
+                                                        <i class="fa fa-bookmark" style="font-size: 25px;line-height: 45px;"></i>
+                                                        <p style="padding: 0px;margin-top: 6px;margin-bottom: 10px;font-size: 12px">
+                                                        我的帖子</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-top: 20px">
+                                                    <div class="text-center"
+                                                    style="padding: 15px;margin: 0px;background: #f6f5f5;color: #323534;">
+                                                    <i class="fa fa-sign-out"></i> 退出登录
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li><!-- 登录注册表单 -->
+                </ul><!-- 导航栏右部 -->
+            </div>
+        </div>
+    </div>
+</div>
+</nav>
+
+<aside id="colorlib-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 breadcrumbs text-center">
+                <h2>新闻</h2>
+                <p><span><a href="index.html">首页</a></span> / <span>新闻</span></p>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<header class="clearfix">
+    <span>毕加思索</span>
+</header>
+<div class="main">
+    <div class="row">
+        <div class="col-md-2 big_box" style="margin-left:-15px;">
+            <ul class="left_box" style="margin: 0;padding: 0;">
+                <li class="pmenu"><a data-toggle="tab" href="#menu1" data-ripple = "ripple"style="cursor: pointer;">本馆简介</a></li>
+                <li class="pmenu"><a data-toggle="tab" href="#menu2" data-ripple = "ripple">新闻公告</a></li>
+                <li class="pmenu"><a data-toggle="tab" href="#menu3" data-ripple = "ripple">开发人员</a></li>
+                <li class="pmenu"><a data-toggle="tab" href="#menu4" data-ripple = "ripple">联系我们 </a></li>
+            </ul>
+        </div>
+
+        <div class="tab-content col-md-9" >
+            <div id="menu1" class="tab-pane fade in active"style="margin-left: 30px;"><!-- in active默认显示menu1 -->
+                <header class="clearfix">
+                        <h1>欢迎来到毕加思索图书馆</h1>
+                 </header>
+                <p><strong>毕加思索图书馆</strong> 。。。。 the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+                <blockquote>
+                    习近平总书记近日在宁夏考察时强调，要全面落实党中央决策部署，坚持稳中求进工作总基调，坚持新发展理念，努力克服新冠肺炎疫情带来的不利影响，优先稳就业保民生，决胜全面建成小康社会，决战脱贫攻坚。宁夏广大干部群众表示，要牢记总书记嘱托，继续建设经济繁荣、民族团结、环境优美、人民富裕的美丽新宁夏。
+                </blockquote>
+                <p class="first-letra">我们设置了<strong><a href="forum.html">论坛</a></strong>, 可以。。。，在<strong><a href="forum.html">图书页</a></strong>有。。。</p>
+                    <!-- <p>
+                        <ul class="colorlib-social-icons">
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                            <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                        </ul>
+                    </p>   -->
+
+                </div>
+
+                <div id="menu2" class="tab-pane fade">
+                    <header class="clearfix">
+                        <h1>新闻时间轴</h1>
+                    </header>
+                    <ul class="cbp_tmtimeline">
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>4/10/13</span> <span>18:30</span></time>
+                            <div class="cbp_tmicon fa fa-calendar"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>开业大吉</h2>
+                                <p>1949 年到 2019 年，70 年弹指一挥间。在这段时间里，我 们成立了新中国，取得了民族的独立与解放；完成了整党整风，抵御了糖衣炮弹的侵袭，加强了党的建设；完成了三大改造，为社会主义建设提供了良好的工业基础；两弹一星的成功，在科技发展势弱的时期增强了我国科研的信心；改革开放、社会主义市场经济的建立，为中国的经济与市场发展插上了腾飞的翅膀；港澳回归，一国两制的实施，是祖国统一迈出的一大步。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-13 05:36"><span>4/13/13</span> <span>05:36</span></time>
+                            <div class="cbp_tmicon fa fa-calendar"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>开业大吉</h2>
+                                <p>1949 年到 2019 年，70 年弹指一挥间。在这段时间里，我 们成立了新中国，取得了民族的独立与解放；完成了整党整风，抵御了糖衣炮弹的侵袭，加强了党的建设；完成了三大改造，为社会主义建设提供了良好的工业基础；两弹一星的成功，在科技发展势弱的时期增强了我国科研的信心；改革开放、社会主义市场经济的建立，为中国的经济与市场发展插上了腾飞的翅膀；港澳回归，一国两制的实施，是祖国统一迈出的一大步。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-15 13:15"><span>4/15/13</span> <span>13:15</span></time>
+                            <div class="cbp_tmicon fa fa-calendar"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>开业大吉</h2>
+                                <p>1949 年到 2019 年，70 年弹指一挥间。在这段时间里，我 们成立了新中国，取得了民族的独立与解放；完成了整党整风，抵御了糖衣炮弹的侵袭，加强了党的建设；完成了三大改造，为社会主义建设提供了良好的工业基础；两弹一星的成功，在科技发展势弱的时期增强了我国科研的信心；改革开放、社会主义市场经济的建立，为中国的经济与市场发展插上了腾飞的翅膀；港澳回归，一国两制的实施，是祖国统一迈出的一大步。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-16 21:30"><span>4/16/13</span> <span>21:30</span></time>
+                            <div class="cbp_tmicon fa fa-calendar"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>开业大吉</h2>
+                                <p>1949 年到 2019 年，70 年弹指一挥间。在这段时间里，我 们成立了新中国，取得了民族的独立与解放；完成了整党整风，抵御了糖衣炮弹的侵袭，加强了党的建设；完成了三大改造，为社会主义建设提供了良好的工业基础；两弹一星的成功，在科技发展势弱的时期增强了我国科研的信心；改革开放、社会主义市场经济的建立，为中国的经济与市场发展插上了腾飞的翅膀；港澳回归，一国两制的实施，是祖国统一迈出的一大步。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-17 12:11"><span>4/17/13</span> <span>12:11</span></time>
+                            <div class="cbp_tmicon fa fa-calendar"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>开业大吉</h2>
+                                <p>1949 年到 2019 年，70 年弹指一挥间。在这段时间里，我 们成立了新中国，取得了民族的独立与解放；完成了整党整风，抵御了糖衣炮弹的侵袭，加强了党的建设；完成了三大改造，为社会主义建设提供了良好的工业基础；两弹一星的成功，在科技发展势弱的时期增强了我国科研的信心；改革开放、社会主义市场经济的建立，为中国的经济与市场发展插上了腾飞的翅膀；港澳回归，一国两制的实施，是祖国统一迈出的一大步。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>  
+
+                <div id="menu3" class="tab-pane fade">
+                    <header class="clearfix">
+                        <h1>小组成员</h1>
+                     </header>
+                    <div class="row"> 
+                        <div class="col-md-5">
+                            <div class="staff-entry">
+                                <a href="#" class="staff-img" style="background-image: url(images/blog-3.jpg);"></a>
+                                <div class="desc">
+                                    <h3>邬长倜</h3>
+                                    <span>组长</span>
+                                    <p>阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴</p>                  
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-md-5">
+                            <div class="staff-entry">
+                                <a href="#" class="staff-img" style="background-image: url(images/blog-3.jpg);"></a>
+                                <div class="desc">
+                                    <h3>唐子安</h3>
+                                    <span>组员</span>
+                                    <p>阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴</p>        
+                                </div>
+                            </div> 
+                        </div>
+                    </div><!-- class="row" -->
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="staff-entry">
+                                <a href="#" class="staff-img" style="background-image: url(images/blog-3.jpg);"></a>
+                                <div class="desc">
+                                    <h3>蒋汶娟</h3>
+                                    <span>组员</span>
+                                    <p>阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴</p>    
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-md-5">
+                            <div class="staff-entry">
+                                <a href="#" class="staff-img" style="background-image: url(images/blog-3.jpg);"></a>
+                                <div class="desc">
+                                    <h3>张婉玉</h3>
+                                    <span>组员</span>
+                                    <p>阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴</p>    
+                                </div>
+                            </div> 
+                        </div>
+                    </div><!-- class="row" -->
+                </div>
+
+
+            <div id="menu4"class="tab-pane fade">
+                <header class="clearfix">
+                        <h1>联系我们</h1>
+                 </header>
+                <div class="col-md-12" style="padding: 40px;">
+                    <form action="#">
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="fname">姓名</label>
+                                <input type="text" id="fname" class="form-control" placeholder="Your name">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="email">邮箱</label>
+                                <input type="text" id="email" class="form-control" placeholder="Your email address">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="subject">主题</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="message">留言</label>
+                                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary">
+                        </div>
+                    </form> 
+                </div>
+            </div><!--menu4-->
+
+
+        </div>  
+    </div>
+</div>
+</div>
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+</div>
+<div class="c"style="text-align: center;background-color: white;padding-top:20px;">
+
+    <p class="link_01"><a href="http://www.cuc.edu.cn" target="_blank">中国传媒大学</a> 
+        <a href="http://www.nlc.cn/" target="_blank">国家数字图书馆</a> 
+        <a href="http://www.nlc.cn/nmcb/" target="_blank">国家典籍博物馆</a> 
+        <a href="http://www.clcn.net.cn/" target="_blank">首都图书馆</a></p>
+        <p class="foot">意见与建议：<a href="mailto:lib@cuc.edu.cn">lib@cuc.edu.cn</a>&nbsp;|<span class="icp"><a href="http://www.beian.miit.gov.cn" target="_blank">   京 ICP 备 10039564 号</a>   京公网安备 110402430031 号</span>  <br>
+        Copyright © All Rights Reserved. 中国传媒大学图书馆 版权所有  总访问量：</p>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Flexslider -->
+    <script src="js/jquery.flexslider-min.js"></script>
+    <!-- Owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
+</body></html>

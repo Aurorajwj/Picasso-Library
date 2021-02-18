@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>毕加思索图书馆</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+
+	<link rel="stylesheet" href="css/loginbox.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src = "js/loginbox.js"></script>
+	<script type="text/javascript" src="js/account.js"></script>
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/rtnstyle.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/account.css">
+	<link rel="stylesheet" href="css/rtnbook.css">
+	<link rel="stylesheet" href="css/admin.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<link rel="stylesheet" href="css/ripple.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap-editable.css">
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body>
+		<div id="logstatus" style="display: none" th:text="${session.user}?${'suc'}:'lose'"></div>
+		<div class="colorlib-loader"></div>
+		
+			<nav class="colorlib-nav" role="navigation">
+				<div class="top-menu">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-3">
+								<div id="colorlib-logo"><nobr><a href="index.html">毕加思索图书馆</a></nobr></div>
+							</div>
+							<div class="col-xs-9 text-right menu-1">
+								<ul>
+									<li ><a href="/">首页</a></li>
+									<li><a href="/news">新闻</a></li>
+									<li ><a href="/forum">论坛</a></li>
+									<li><a href="/books">图书</a></li>
+									<li><a href="/leaderboard">排行榜</a></li>
+
+									<li><a href="登录注册表单.html" target="_self" class = "change">登录 </a>
+										<div class="col-lg-2" id="userinfo" >
+											<div class="right">
+												<ul class="nav navbar-nav">
+													<li class="dropdown" >
+														<a href="#" class="dropdown-toggle"
+														data-toggle="dropdown"
+														style="height: 60px">
+														<img alt="" class="img-circle" src="images/gallery-1.jpg" width="38px" height="38px"/>
+														<span style="color: #000000;font-size: 15px;">
+														</span>
+													</a>
+													<div class="dropdown-menu pull-right"
+													style="background: #FFFFFF;width: 260px;overflow: hidden">
+													<div style="margin-top: 16px;border-bottom: 1px solid #eeeeee">
+														<div style="text-align: center">
+															<img class="img-circle" src="images/gallery-1.jpg"
+															style="width: 38px;height: 38px;"/>
+														</div>
+														<div style="color: #323534;text-align: center;line-height: 36px;font-size: 15px">
+															<span>username</span>
+														</div>
+													</div>
+													<div class="row" style="margin-left: 15px;margin-right: 15px;margin-top: 10px">
+														<div class="col-md-12 text-center grid">
+															<i class="fa fa-user" style="font-size: 25px;line-height: 45px;"></i>
+															<p style="padding: 0px;margin-top: 6px;margin-bottom: 10px;font-size: 12px">
+															录入新书</p>
+														</div>
+														
+													</div>
+														<a href="/logout" style="margin: 0;padding: 0;">
+															<div class="row" style="margin-top: 20px">
+																<div class="text-center" style="padding: 15px;margin: 0px;background: #f6f5f5;color: #323534;">
+																	<i class="fa fa-sign-out"></i> 退出登录
+																</div>
+															</div>
+														</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li><!-- 登录注册表单 -->
+					</ul><!-- 导航栏右部 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<aside id="colorlib-breadcrumbs">
+<!--     <div class="container"> -->
+        <div class="row">
+            <div class="col-md-12 breadcrumbs text-center">
+                <h2>录入新书</h2>
+                <p><span><a href="index.html">首页</a></span> / <span>论坛</span></p>
+            </div>
+        </div>
+ <!--    </div> -->
+</aside>
+
+   
+<div class="container"> 
+	<!-- <div class="overlay" style="height:1000px;background-image: url(images/blog-8.jpg); background-blend-mode: multiply;filter: blur(2.5px);z-index: -1;position: absolute;bottom: 40;top: 50;left: 0; right: 0;opacity: .94;"></div> -->
+			<div id="menu4"class="tab-pane fade in active">
+                <header class="clearfix">
+                        <h1>新书录入</h1>
+                 </header>
+                <div class="col-md-12" style="padding: 40px;">
+                    <form action="#">
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="fname">书名</label>
+                                <input type="text" id="fname" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="email">ISBD</label>
+                                <input type="text" id="email" class="form-control" placeholder="ISBD">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="subject">作者</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Writer">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="subject">出版社</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Publisher">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="message">简介</label>
+                                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Introduction to the new book"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="确认提交" class="btn btn-primary">
+                        </div>
+                    </form> 
+                </div>
+            </div>
+	</div>
+	
+    
+    <!-- </div> -->
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	<div class="footer_in"style="text-align: center;background-color: white;padding-top:20px">
+
+		<p class="link_01"><a href="http://www.cuc.edu.cn" target="_blank">中国传媒大学</a> 
+			<a href="http://www.nlc.cn/" target="_blank">国家数字图书馆</a> 
+			<a href="http://www.nlc.cn/nmcb/" target="_blank">国家典籍博物馆</a> 
+			<a href="http://www.clcn.net.cn/" target="_blank">首都图书馆</a></p>
+			<p class="foot">意见与建议：<a href="mailto:lib@cuc.edu.cn">lib@cuc.edu.cn</a>&nbsp;|<span class="icp"><a href="http://www.beian.miit.gov.cn" target="_blank">   京 ICP 备 10039564 号</a>   京公网安备 110402430031 号</span>  <br>
+			Copyright © All Rights Reserved. 中国传媒大学图书馆 版权所有  总访问量：</p>
+		</div>
+
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Flexslider -->
+		<script src="js/jquery.flexslider-min.js"></script>
+		<!-- Owl carousel -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- Magnific Popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/magnific-popup-options.js"></script>
+		<!-- Main -->
+		<script src="js/main.js"></script>
+		<script src="js/bootstrap-editable.js"></script>
+
+
+	</body>
+	</html>
+
+<script src="js/ripple.min.js" charset="UTF-8"></script>
+<script>
+	 $(function(){
+        $('.tedit').editable({
+            type: "text",                //编辑框的类型。支持text|textarea|select|date|checklist等
+            // title: "书名",              //编辑框的标题
+            disabled: false,             //是否禁用编辑
+            emptytext: "点此编辑",          //空值的默认文本
+            mode: "inline",              //编辑框的模式：支持popup和inline两种模式，默认是popup
+            validate: function (value) { //字段验证
+                if (!$.trim(value)) {
+                    return '不能为空';
+                }
+            }
+        });
+
+    });
+</script>
+<script>
+	function addfunc(){
+		// var row = document.getElementsByclassName("singlerow")[0];
+		var table = document.getElementById("join_con");
+		text = '<tr class="singlerow join_zp_c"><td class="tedit bname" data-type="text" style="width:17%"></td><td class="tedit bisbn" data-type="text" style="width:17%"></td><td class="tedit bauthor" data-type="text" style="width:17%"></td><td class="tedit bpress" data-type="text" style="width:17%"></td><td class="bintro" data-type="text" style="width:17%" onclick="zk()">点此展开编辑</td></tr>'
+		$(table).append(text);
+		var tabl = document.getElementById("join_con");
+		rtext = '<tr class="join_zp_n"><td colspan="5"><div class="join_ms"><i></i>书籍简介</div><div class="join_cn tedit "></div></td></tr>'
+		$(tabl).append(rtext);
+		console.log(table);
+		$('.tedit').editable({
+            type: "text",                //编辑框的类型。支持text|textarea|select|date|checklist等
+            // title: "书名",              //编辑框的标题
+            disabled: false,             //是否禁用编辑
+            emptytext: "点此编辑",          //空值的默认文本
+            mode: "inline",              //编辑框的模式：支持popup和inline两种模式，默认是popup
+            validate: function (value) { //字段验证
+                if (!$.trim(value)) {
+                    return '不能为空';
+                }
+            }
+        });
+		zk();
+	}
+</script>
+<script type="text/javascript">
+    new Ripple({
+        opacity: 0.6,  //水波纹透明度
+        speed: 1,      //水波纹扩散速度
+        bgColor: "#fff", //水波纹颜色
+        cursor: true  //是否显示手型指针
+    })
+</script>
+<script type="text/javascript">
+	var updateres = document.getElementById("updateres").innerText;
+	if(updateres!=''){
+		alert(updateres);
+	}
+    $(".ppassword").on("click", ".fa-eye-slash", function () {
+        $(this).removeClass("fa-eye-slash").addClass("fa-eye");
+        $(this).prev().attr("type", "text");
+    });
+     
+    $(".ppassword").on("click", ".fa-eye", function () {
+        $(this).removeClass("fa-eye").addClass("fa-eye-slash");
+        $(this).prev().attr("type", "password");
+    });
+</script>
+<script type="text/javascript">
+	$('.pbutton').click(function(){
+	// var buttonId = '$(this).attr('id')';
+	// console.log("yes");
+	var buttonId = 'five';
+
+	$('#modal-container').removeAttr('class').addClass(buttonId);
+	console.log(buttonId);
+	$('body').addClass('modal-active');
+	// document.getElementById("_page").style.display="none";
+})
+
+$('#close_btn').click(function(){
+	$('#modal-container').addClass('out');
+	$('body').removeClass('modal-active');
+	// $('#_page').removeClass('temphide');
+	// document.getElementById("_page").style.display="";
+});
+</script>
+<script type="text/javascript" src="js/rtnscript.js"></script>
+<script>
+	function zk(){
+	var join_zp_c = document.querySelectorAll(".join_zp_c");
+	var join_zp_n = document.querySelectorAll(".join_zp_n");
+	var join_zp_length = join_zp_c.length;
+	// console.log(join_zp_length);
+	// console.log("hh");
+	for(var i=0;i<join_zp_length;i++){
+		join_zp_c[i].index = i;
+		join_zp_c[i].onclick = function(){
+			// console.log("kkk");
+			var isf = $(join_zp_n[this.index]).attr('class');
+			console.log(this.index);
+			// console.log(isf);
+			if(isf == 'join_zp_n join_active'){
+				// console.log('lkl');
+				$(join_zp_n[this.index]).removeClass('join_active');
+				// console.log($(join_zp_n[this.index]).className);
+			}else{
+				for(var i=0;i<join_zp_length;i++){
+					$(join_zp_n[i]).className = 'join_zp_n';
+				}
+				$(join_zp_n[this.index]).addClass('join_active');
+			}
+		}
+	}
+}
+</script>

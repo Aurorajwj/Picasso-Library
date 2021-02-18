@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>毕加思索图书馆</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+
+	
+<!-- 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src = "js/loginbox.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css"> -->
+	<link rel="stylesheet" href="css/sendcmt.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+	<body class="colorlib-subscribe" style="background-image: url(images/blog-8.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay" style="z-index:-1;background: linear-gradient(135deg, #ffffff 0%, #dbb479cc 100%);"></div> 
+		<div class="nav">
+			<div class="nav-inner">
+				<span class="nav-logo">
+					<a href="index.html">毕加思索图书馆</a>
+				</span>
+				<h1 class="nav-label">前来发帖</h1>
+				<!-- <div id="nav-top-actions" class="nav-actions"></div> -->
+				<span class="returnbtn"><button type="submit" onclick="returnFun()" value="返回">
+					<a href="forum.html">返回</a></button>
+				</span>
+				<!-- <span class="sendbtn"><input type="submit" onclick="subFun()" value="发表帖子"></span> -->
+			</div>
+		</div>
+	<div class="comment">
+		<div>
+			<textarea id="title" maxlength="70"placeholder="添加标题" rows="1" ></textarea>
+		</div>
+		<div class="hide">
+			<h3>请在下方输入框填写帖子正文内容</h3>
+			<pre id="ppre"></pre>
+			<textarea id="cmt-content" maxlength="20000" placeholder="添加正文" oninput ="autosize(this)"></textarea>
+		</div>
+		<div class="addtags" id="addtags">
+			<h3>请在下方输入框填写标签，Enter确认</h3>
+			<input id="input" placeholder="添加标签">
+		</div>
+		<div class="sendbtn"><input type="submit" onclick="subFun()" value="发表帖子"></div>
+	</div>
+	<link href="css/Fytx_Tips.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	  <script type="text/javascript" src="js/Fytx_Tips_Config.js"></script>
+    <!--美化脚本程序-->
+    <script type="text/javascript" src="js/Fytx_Tips.js"></script>
+	<script>
+  //高度自适应
+  function autosize(t) {
+    var textarea = document.getElementById('cmt-content')
+    var pre = document.getElementById('ppre');
+    pre.innerHTML = textarea.value;
+    console.log(pre.innerHTML);
+    var realHeight = pre.offsetHeight;//offsetHeight = height + padding + border
+    console.log(realHeight);
+    if(realHeight > 50) textarea.style.height = (realHeight + 24) + 'px'; //加24为一行的高度，减32为padding和border
+    else textarea.style.height = realHeight -12 + 'px';
+    if(realHeight > 330) $(textarea).addClass("scroll");
+  }
+
+var cnt = 0;
+$("#input").keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    var input = this.value;
+    console.log(input);
+    if(keycode == '13'){
+    	var out_div = document.getElementById("addtags");
+    	// console.log(div);
+    	if(cnt==0){
+    		cnt+=1;
+    		var div = document.createElement("div");
+    		$(div).attr("id","autodiv");
+    	}
+    	else{
+    		var div = document.getElementById("autodiv");
+    	}
+    	var span = document.createElement("span");
+    	// console.log(span);
+    	$(span).addClass("ptag");
+    	var val = input;
+    	$(span).append(val);
+    	var txt="<button type='button' class='tclose' onfocus='pclose()'aria-label='Close'><span aria-hidden='true'>×</span></button>"
+    	$(span).append(txt);
+    	$(div).append(span);
+    	$(out_div).append(div);
+    	this.value="";
+    }
+});
+</script>
+<script type="text/javascript">
+	function pclose(){
+		// console.log("hahah");
+		$(".tclose").click(function(){
+		$(this).parent().remove();
+		// Obj.parentNode.parentNode.removeChild(Obj.parentNode);
+	});
+	}
+	
+</script>
+<script type="text/javascript">
+	function subFun(){
+		var title = document.getElementById("title");
+		var content = document.getElementById("cmt-content");
+		// var input = document.getElementById("input");
+		// if(input.value!=""){  
+		// 	var span = document.createElement("span");
+  //   		// console.log(span);
+	 //    	$(span).addClass("ptag");
+	 //    	var val = input;
+	 //    	$(span).append(val);
+	 //    	var txt="<button type='button' class='tclose' onfocus='pclose()'aria-label='Close'><span aria-hidden='true'>×</span></button>"
+	 //    	$(span).append(txt);
+	 //    	$(div).append(span);
+	 //    	$(out_div).append(div);
+	 //    	this.value="";
+		// }
+		if(title.value=="") $.alert("提交失败","你还没有写入标题");
+		else if(content.value=="") $.alert("提交失败","你还没有写入正文");
+		else {
+			$.confirm("是否提交","确定要发表当前内容吗？");
+			 $.isok = function () {
+                alert("点击了确定按钮！");
+            }
+            $.iscancel = function () {
+                alert("点击了取消按钮！");
+            }
+		}
+	}
+</script>
+	</body>
+</html>
+

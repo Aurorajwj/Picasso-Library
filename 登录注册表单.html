@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://www.17sucai.com/preview/1424582/2019-06-11/form/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>登录注册表单</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--图标库-->
+<link rel="stylesheet" href="./登录注册表单_files/all.min.css">
+
+<!--响应式框架-->
+<link rel="stylesheet" href="./登录注册表单_files/bootstrap.min.css">
+
+<!--主要样式-->
+<link rel="stylesheet" href="./登录注册表单_files/style.css">
+
+
+</head>
+
+<body>
+  
+<div class="container">
+
+	<div class="card-wrap">
+	
+		<div class="card border-0 shadow card--welcome is-show" id="welcome">
+			<div class="card-body">
+				<h2 class="card-title"></h2>
+				<p>欢迎进入登录页面</p>
+				<div class="btn-wrap"><a class="btn btn-lg btn-register js-btn" data-target="register">注册</a><a class="btn btn-lg btn-login js-btn" data-target="login">登录</a><a class="btn btn-lg btn-login js-btn" data-target="admin_login">管理员登录</a></div>
+				
+			</div>
+		</div>
+		
+		<div class="card border-0 shadow card--register" id="register">
+			<div class="card-body">
+				<h2 class="card-title">账号注册</h2>
+
+				<form method="post" action="/register" >
+					<div class="row">
+					<div class="form-group">
+						<label class="form-inline " />用户名:&nbsp&nbsp&nbsp
+						<input class="form-control" type="text" placeholder="用户名" required="required" name="username">
+					</div>
+					</div>
+					<div class="row">
+					<div class="form-group">
+						<label class="form-inline " />邮箱:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input class="form-control" type="email" placeholder="邮箱" required="required" name="email">					 
+					</div>
+					</div>
+					<div class="row">
+					<div class="form-group">
+						<label class="form-inline" />密码:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input class="form-control" type="password" placeholder="密码" required="required" name="pswd">		 
+					</div>
+					</div>
+					<div class="row">
+					<div class="form-group">
+						<label class="form-inline" />确认密码:	
+						<input class="form-control" type="password" placeholder="再输入一次密码" required="required" name="pswd">		 
+					</div>
+					</div>
+
+					<div class="row">
+					<div class="form-group">
+						<label class="form-inline" />姓名:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp			
+
+						<input class="form-control" type="text" placeholder="姓名" required="required" name="name"> 
+					</div>
+					</div>
+					<div class="row">
+					<div class="form-group">
+						<label class="form-inline" />手机号:&nbsp&nbsp&nbsp			
+
+						<input class="form-control" type="text" placeholder="手机号" required="required" name="phnum"> 
+					</div>
+					</div>
+					<div class="row">
+					<div class="form-group">
+						<label class="form-inline" />性别:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp		
+
+						<input id="man" type="radio" checked="checked" name="sex" />男
+                        <input id="woman" type="radio"  name="sex"/>女
+					</div>
+					</div>
+					<div class="row">
+					<div class="form-group">
+						<label class="form-inline" />身份证号:		
+
+						<input class="form-control" type="text" placeholder="身份证号" required="required" name="idnum"> 
+					</div>
+					</div>
+					
+					<button class="btn btn-lg">注册</button>
+				</form>
+			</div>
+			<button class="btn btn-back js-btn" data-target="welcome">X</button>
+		</div>
+		
+		<div class="card border-0 shadow card--login" id="login">
+			<div class="card-body">
+				<h2 class="card-title">欢迎登录！</h2>
+				<p>账号登陆</p>
+				<form action="/login" method="post">
+					<div class="form-group">
+						<input class="form-control" type="email" placeholder="用户名/邮箱/手机号" required="required" name="account">
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="password" placeholder="密码" required="required" name="pswd">
+					</div>
+					<p><a >忘记密码?</a></p>
+					<button class="btn btn-lg">登录</button>
+				</form>
+			</div>
+			<button class="btn btn-back js-btn" data-target="welcome">X</button>
+		</div>
+
+		<div class="card border-0 shadow card--login" id="admin_login">
+			<div class="card-body">
+				<h2 class="card-title">欢迎登录！</h2>
+				<p>账号登陆</p>
+				<form action="/login" method="post">
+					<div class="form-group">
+						<input class="form-control" type="email" placeholder="管理员id" required="required" name="account">
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="password" placeholder="密码" required="required" name="pswd">
+					</div>
+					<p><a >忘记密码?</a></p>
+					<button class="btn btn-lg">登录</button>
+				</form>
+			</div>
+			<button class="btn btn-back js-btn" data-target="welcome">X</button>
+		</div>
+        
+			<button class="btn btn-back js-btn" data-target="welcome">X</button>
+		</div><!-- 整个卡片 -->
+		
+	</div>
+	
+</div>
+  
+<script src="./js/login.js"></script>
+
+
+</body></html>

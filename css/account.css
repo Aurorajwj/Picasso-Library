@@ -1,0 +1,91 @@
+.left_box{
+	border-radius:2px;
+	box-shadow: 0px 0px 30px 0px #efe9e9;
+}
+.big_box{
+	margin-right:20px;
+}
+.pcontainer{
+	margin-top:30px;
+}
+.pmsg{
+	height:320px;
+}
+.pmenu{
+	background: #FFFAF0;
+	width:180px;
+	height:80px;
+	font-size:20px;
+	text-align: center;
+	padding:10px;
+}
+.pmenu:hover{
+	background:#FFDAB9;
+}
+.pmenu:active{
+	background:#EEB4B4;
+}
+.pmenu>a{
+	color:black;
+}
+.ppwd {
+	margin:20px;
+	width: 300px;
+	height: 70px;
+	background: #ffffff;
+	border-radius: 20px;
+	will-change: transform;
+	border-radius: 1;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 18px;
+	color: #000000;
+	outline: none;
+	text-align: left;
+	border: 0;
+	padding: 10px 80px 10px 30px;
+	-webkit-transform-origin: left center;
+	      transform-origin: left center;
+	transition: -webkit-transform 0.13s;
+	transition: transform 0.13s;
+	transition: transform 0.13s, -webkit-transform 0.13s;
+	font-family: "Poppins", sans-serif;
+	box-shadow: 0px 0px 30px 0px #FFFAF0;
+	transition: letter-spacing 0.13s ease-out, box-shadow 0.13s ease-out;
+}
+
+.plabel{
+	margin-top:25px;
+}
+
+.fa-eye-slash{
+    margin-top: 6px;
+    margin-left: 7px;
+    width: 24px;
+    height: 20px;
+    /*background-image: url(./vivo_img/login/eye-password.png);*/
+    background-repeat: no-repeat;
+    background-size: 24px 17px;
+}
+.fa-eye{
+    margin-top: 6px;
+    width: 24px;
+    margin-left: 7px;
+    height: 20px;
+    /*background-image: url(./vivo_img/login/eye-password-active.png);*/
+    background-repeat: no-repeat;
+    background-size: 24px 17px;
+
+}
+
+.pbtn{
+	width:200px;
+	height:56px;
+	border-radius:30px;
+	background:url(../images/send1.png) no-repeat 354px 12px;
+	background-color:#f54950;
+	margin-left:154px;
+	font-size:22px;
+    font-family: yt;
+}
